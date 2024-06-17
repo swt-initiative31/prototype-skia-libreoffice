@@ -185,6 +185,7 @@ $(eval $(call gb_Module_add_moduledirs,libreoffice,\
 	uui \
 	vbahelper \
 	vcl \
+	vcl4swt \
 	wizards \
 	writerperfect \
 	xmerge \
