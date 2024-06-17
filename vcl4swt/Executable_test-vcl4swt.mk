@@ -8,19 +8,19 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 #
 
-$(eval $(call gb_Executable_Executable,vcl4swt))
+$(eval $(call gb_Executable_Executable,test-vcl4swt))
 
-$(eval $(call gb_Executable_use_api,vcl4swt,\
+$(eval $(call gb_Executable_use_api,test-vcl4swt,\
     offapi \
     udkapi \
 ))
 
-$(eval $(call gb_Executable_set_include,vcl4swt,\
+$(eval $(call gb_Executable_set_include,test-vcl4swt,\
     $$(INCLUDE) \
-    -I$(SRCDIR)/vcl/inc \
+    -I$(SRCDIR)/vcl4swt/inc \
 ))
 
-$(eval $(call gb_Executable_use_libraries,vcl4swt,\
+$(eval $(call gb_Executable_use_libraries,test-vcl4swt,\
     tl \
     sal \
     vcl \
@@ -29,10 +29,11 @@ $(eval $(call gb_Executable_use_libraries,vcl4swt,\
     comphelper \
     i18nlangtag \
     fwk \
+    vcl4swt \
 ))
 
-$(eval $(call gb_Executable_add_exception_objects,vcl4swt,\
-    vcl4swt/vcl4swt \
+$(eval $(call gb_Executable_add_exception_objects,test-vcl4swt,\
+    vcl4swt/src/test/test-vcl4swt \
 ))
 
 # vim: set noet sw=4 ts=4:

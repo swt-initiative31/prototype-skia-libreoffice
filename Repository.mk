@@ -77,7 +77,7 @@ $(eval $(call gb_Helper_register_executables,NONE, \
 	vcldemo \
 	svdemo \
 	minvcl \
-	vcl4swt \
+	test-vcl4swt \
 	svptest \
 	tiledrendering \
 	mtfdemo \
@@ -494,6 +494,7 @@ $(eval $(call gb_Helper_register_libraries_for_install,OOOLIBS,ooo, \
 		vbahelper \
 	) \
 	vcl \
+	vcl4swt \
 	writerperfect \
 	xmlscript \
 	xmlfa \

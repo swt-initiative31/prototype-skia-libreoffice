@@ -30,7 +30,6 @@ class TheApplication : public Application
 {
 public:
     virtual int Main();
-
 private:
     VclPtr<vcl::Window> mpWin;
 };
@@ -39,14 +38,14 @@ private:
 int TheApplication::Main()
 {
     mpWin = VclPtr<WorkWindow>::Create(nullptr, WB_APP | WB_STDWORK);
-    mpWin->SetText(u"Minimum VCL for SWT application with a window"_ustr);
+    mpWin->SetText(u"Minimum VCL application via library"_ustr);
     mpWin->Show();
     Execute();
     mpWin.disposeAndClear();
     return 0;
 }
 
-SAL_IMPLEMENT_MAIN()
+SAL_DLLPUBLIC_EXPORT int show_minvcl_window(void)
 {
     try
     {
