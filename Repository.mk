@@ -72,7 +72,6 @@ $(eval $(call gb_Helper_register_executables,NONE, \
 	$(if $(filter-out ANDROID iOS WNT,$(OS)), \
         fftester \
         svpclient ) \
-		
 	$(if $(filter LINUX %BSD SOLARIS,$(OS)), tilebench) \
 	$(if $(filter LINUX MACOSX SOLARIS WNT %BSD,$(OS)),icontest) \
 	vcldemo \
