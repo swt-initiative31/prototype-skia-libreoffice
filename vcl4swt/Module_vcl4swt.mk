@@ -44,4 +44,8 @@ $(eval $(call gb_Module_add_targets,vcl4swt,\
     Executable_test-vcl4swt \
 ))
 
+#$(eval $(call gb_Module_add_targets,vcl4swt,\
+    Library_vcl4swt \
+))
+
 # vim: set noet sw=4 ts=4:
