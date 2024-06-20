@@ -8,8 +8,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-#include <dispatch/dispatch.h>
-
 #include <sal/config.h>
 
 #include <framework/desktop.hxx>
