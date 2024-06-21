@@ -49,28 +49,20 @@ int TheApplication::Main()
 
 SAL_DLLPUBLIC_EXPORT int show_minvcl_window(void)
 {
-    try
-    {
-        TheApplication aApp;
+    TheApplication aApp;
 
-        auto xContext = cppu::defaultBootstrap_InitialComponentContext();
-        css::uno::Reference<css::lang::XMultiServiceFactory> xServiceManager(
-            xContext->getServiceManager(), css::uno::UNO_QUERY);
-        comphelper::setProcessServiceFactory(xServiceManager);
-        LanguageTag::setConfiguredSystemLanguage(MsLangId::getSystemLanguage());
-        InitVCL();
+    auto xContext = cppu::defaultBootstrap_InitialComponentContext();
+    css::uno::Reference<css::lang::XMultiServiceFactory> xServiceManager(
+        xContext->getServiceManager(), css::uno::UNO_QUERY);
+    comphelper::setProcessServiceFactory(xServiceManager);
+    LanguageTag::setConfiguredSystemLanguage(MsLangId::getSystemLanguage());
+    InitVCL();
 
-        aApp.Main();
+    aApp.Main();
 
-        framework::getDesktop(::comphelper::getProcessComponentContext())->terminate();
-        DeInitVCL();
-        comphelper::setProcessServiceFactory(nullptr);
-    }
-    catch (...)
-    {
-        std::cout << "Exception has occurred\n";
-        return 1;
-    }
+    framework::getDesktop(::comphelper::getProcessComponentContext())->terminate();
+    DeInitVCL();
+    comphelper::setProcessServiceFactory(nullptr);
 
     return 0;
 }
