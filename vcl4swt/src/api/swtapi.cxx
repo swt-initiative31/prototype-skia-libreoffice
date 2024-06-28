@@ -25,6 +25,7 @@
 #include <api/swtapi.hxx>
 
 #include <iostream>
+#include <api/app_App.h>
 
 namespace
 {
@@ -49,7 +50,7 @@ int TheApplication::Main()
 
 SAL_DLLPUBLIC_EXPORT int show_minvcl_window(void)
 {
-    TheApplication aApp;
+     TheApplication aApp;
 
     auto xContext = cppu::defaultBootstrap_InitialComponentContext();
     css::uno::Reference<css::lang::XMultiServiceFactory> xServiceManager(
@@ -65,6 +66,13 @@ SAL_DLLPUBLIC_EXPORT int show_minvcl_window(void)
     comphelper::setProcessServiceFactory(nullptr);
 
     return 0;
+}
+
+JNIEXPORT void JNICALL Java_app_App_showMinVCLWindowUsingJNI(JNIEnv *env, jobject obj) {
+    (void)env; // To avoid unused parameter warnings
+    (void)obj; // To avoid unused parameter warnings
+    show_minvcl_window();
+    return;
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab cinoptions=b1,g0,N-s cinkeys+=0=break: */
