@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/xmerge.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/unoloader.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/unoil.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/table.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/smoketest.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/sdbc_hsqldb.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/sac.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/ridl.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/reportbuilderwizard.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/reportbuilder.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/report.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/query.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/officebean.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libxml-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libserializer-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/librepository-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libreoffice.jar" sourcepath="/prototype-skia-libreoffice/ridljar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libloader-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/liblayout.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libformula-1.1.7.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libfonts-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/libbase-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/jurt.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/juh.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/js.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/java_websocket.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/java_uno.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/hsqldb.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/form.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/flute-1.1.6.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/flow-engine.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/commonwizards.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/bsh.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/XMergeBridge.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/ScriptProviderForJavaScript.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/ScriptProviderForJava.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/ScriptProviderForBeanShell.jar"/>
+	<classpathentry kind="lib" path="/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/classes/ScriptFramework.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -198,3 +198,6 @@ gdbtrace.log
 
 # xml unit tests sometimes leave these lying around
 **/secmod.db
+
+# java build files for uno swt
+/VclUnoSwt/bin
