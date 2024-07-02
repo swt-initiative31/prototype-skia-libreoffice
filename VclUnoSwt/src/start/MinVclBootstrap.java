@@ -332,37 +332,37 @@ public class MinVclBootstrap {
              throw new BootstrapException( "no local component context!" );
 
          // find office executable relative to this class's class loader
-//         String sOffice =
-//             System.getProperty( "os.name" ).startsWith( "Windows" ) ?
-//             "soffice.exe" : "soffice";
-//         File fOffice = NativeLibraryLoader.getResource(
-//             MinVclBootstrap.class.getClassLoader(), sOffice );
-//         if ( fOffice == null )
-//             throw new BootstrapException( "no office executable found!" );
-//
-//         // create random pipe name
-//         String sPipeName = "uno" +
-//             Long.toString(randomPipeName.nextLong() & 0x7fffffffffffffffL);
-//
-//         // create call with arguments
-//         String[] cmdArray = new String[ argArray.length + 2 ];
-//         cmdArray[0] = fOffice.getPath();
-//         cmdArray[1] = ( "--accept=pipe,name=" + sPipeName + ";urp;" );
-//
-//         System.arraycopy( argArray, 0, cmdArray, 2, argArray.length );
+         String sOffice =
+             System.getProperty( "os.name" ).startsWith( "Windows" ) ?
+             "soffice.exe" : "soffice";
+         File fOffice = NativeLibraryLoader.getResource(
+             MinVclBootstrap.class.getClassLoader(), sOffice );
+         if ( fOffice == null )
+             throw new BootstrapException( "no office executable found!" );
 
- 		String exec = "/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/oosplash";
-         
+         // create random pipe name
+         String sPipeName = "uno" +
+             Long.toString(randomPipeName.nextLong() & 0x7fffffffffffffffL);
+
+         // create call with arguments
+         String[] cmdArray = new String[ 2 ];
+         cmdArray[0] = fOffice.getPath();
+         cmdArray[1] = ( "--accept=pipe,name=" + sPipeName + ";urp;" );
+
+//         System.arraycopy( argArray, 0, cmdArray, 2, argArray.length );
+//
+//         String exec = "/home/linuxsub/git/prototype-skia-libreoffice/instdir/program/oosplash";
+//
 //        String exec = "/home/linuxsub/git/prototype-skia-libreoffice/workdir/LinkTarget/Executable/minvcl";
 //        String exec = "/home/linuxsub/git/prototype-skia-libreoffice/workdir/LinkTarget/Executable/test-vcl4swt";
- 		String sPipeName = "uno" + Long.toString(randomPipeName.nextLong() & 0x7fffffffffffffffL);
-
- 		String pipeArg = ("--accept=pipe,name=" + sPipeName + ";urp;");
-
- 		String[] cmdArray = new String[2];
-
- 		cmdArray[0] = exec;
- 		cmdArray[1] = pipeArg;
+//        String sPipeName = "uno" + Long.toString(randomPipeName.nextLong() & 0x7fffffffffffffffL);
+//
+//        String pipeArg = ("--accept=pipe,name=" + sPipeName + ";urp;");
+//
+//        String[] cmdArray = new String[2];
+//
+//        cmdArray[0] = exec;
+//        cmdArray[1] = pipeArg;
          
          System.out.println(Arrays.asList(cmdArray));
          
