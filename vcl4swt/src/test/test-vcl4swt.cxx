@@ -7,14 +7,8 @@
 
 SAL_IMPLEMENT_MAIN()
 {
-    try
-    {
-        return show_minvcl_window();
-    }
-    catch (...)
-    {
-        return 1;
-    }
 
-    return 0;
+	show_minvcl_window();
+
+	return 0;
 }

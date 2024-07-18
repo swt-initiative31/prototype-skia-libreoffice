@@ -24,6 +24,7 @@ $(eval $(call gb_Library_Library,vcl4swt))
 $(eval $(call gb_Library_set_include,vcl4swt,\
     $$(INCLUDE) \
     -I$(SRCDIR)/vcl4swt/inc \
+    -I$(SRCDIR)/vcl/inc \
 ))
 
 $(eval $(call gb_Library_add_defs,vcl4swt,\

@@ -26,6 +26,11 @@
 
 #include <iostream>
 #include <api/app_App.h>
+#include <vcl/toolkit/button.hxx>
+
+#include <osl/mutex.hxx>
+#include <svdata.hxx>
+#include <salinst.hxx>
 
 namespace
 {
@@ -38,11 +43,68 @@ private:
 };
 }
 
+
+VclPtr<vcl::Window> win;
+VclPtr<PushButton>   button;
+
+SAL_DLLPUBLIC_EXPORT int show_window(void)
+{
+
+    win = VclPtr<WorkWindow>::Create(nullptr, WB_APP );
+    win->SetText(u"Minimum VCL application via library"_ustr);
+    win->Show();
+
+    return 0;
+
+}
+
+
+SAL_DLLPUBLIC_EXPORT int close_window(void)
+{
+
+	win.disposeAndClear();
+	return 0;
+}
+
+	VclPtr<vcl::Window> topWin;
+
+
+	SAL_DLLPUBLIC_EXPORT int set_text(void)
+	{
+
+		topWin->SetText(u"Test Change Header"_ustr);
+
+	    return 0;
+
+	}
+
+
+	SAL_DLLPUBLIC_EXPORT int add_button(void)
+	{
+
+		 comphelper::SolarMutex *m = ImplGetSVData()->mpDefInst->GetYieldMutex();
+		 m->acquire();
+
+	    button = VclPtr<PushButton>::Create(topWin, 0);
+	    button->SetText( u"Test Button"_ustr );
+	    button->Show();
+	    button->SetPosSizePixel( Point( 10, 300 ), Size( 120,25 ) );
+
+	    m->release( );
+
+	    return 0;
+
+	}
+
 int TheApplication::Main()
 {
     mpWin = VclPtr<WorkWindow>::Create(nullptr, WB_APP | WB_STDWORK);
     mpWin->SetText(u"Minimum VCL application via library"_ustr);
     mpWin->Show();
+
+    topWin = mpWin;
+
+
     Execute();
     mpWin.disposeAndClear();
     return 0;
@@ -67,6 +129,40 @@ SAL_DLLPUBLIC_EXPORT int show_minvcl_window(void)
 
     return 0;
 }
+
+SAL_DLLPUBLIC_EXPORT int init(void)
+{
+     TheApplication aApp;
+
+    auto xContext = cppu::defaultBootstrap_InitialComponentContext();
+    css::uno::Reference<css::lang::XMultiServiceFactory> xServiceManager(
+        xContext->getServiceManager(), css::uno::UNO_QUERY);
+    comphelper::setProcessServiceFactory(xServiceManager);
+    LanguageTag::setConfiguredSystemLanguage(MsLangId::getSystemLanguage());
+    InitVCL();
+
+    return 0;
+
+}
+
+SAL_DLLPUBLIC_EXPORT int deinit(void)
+{
+     TheApplication aApp;
+
+    auto xContext = cppu::defaultBootstrap_InitialComponentContext();
+    css::uno::Reference<css::lang::XMultiServiceFactory> xServiceManager(
+        xContext->getServiceManager(), css::uno::UNO_QUERY);
+    comphelper::setProcessServiceFactory(xServiceManager);
+    LanguageTag::setConfiguredSystemLanguage(MsLangId::getSystemLanguage());
+    InitVCL();
+
+    return 0;
+
+}
+
+
+
+
 
 JNIEXPORT void JNICALL Java_app_App_showMinVCLWindowUsingJNI(JNIEnv *env, jobject obj) {
     (void)env; // To avoid unused parameter warnings
