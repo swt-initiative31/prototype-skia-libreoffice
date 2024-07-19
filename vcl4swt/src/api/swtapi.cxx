@@ -28,6 +28,8 @@
 #include <api/app_App.h>
 #include <vcl/toolkit/button.hxx>
 
+#include <vcl/toolkit/calendar.hxx>
+
 #include <osl/mutex.hxx>
 #include <svdata.hxx>
 #include <salinst.hxx>
@@ -46,6 +48,8 @@ private:
 
 VclPtr<vcl::Window> win;
 VclPtr<PushButton>   button;
+
+VclPtr<CalendarField>   calendar;
 
 SAL_DLLPUBLIC_EXPORT int show_window(void)
 {
@@ -87,8 +91,24 @@ SAL_DLLPUBLIC_EXPORT int close_window(void)
 
 	    button = VclPtr<PushButton>::Create(topWin, 0);
 	    button->SetText( u"Test Button"_ustr );
-	    button->Show();
 	    button->SetPosSizePixel( Point( 10, 300 ), Size( 120,25 ) );
+	    button->Show();
+
+	    m->release( );
+
+	    return 0;
+
+	}
+
+
+	SAL_DLLPUBLIC_EXPORT int add_calendar(void)
+	{
+
+		 comphelper::SolarMutex *m = ImplGetSVData()->mpDefInst->GetYieldMutex();
+		 m->acquire();
+		 calendar = VclPtr<CalendarField>::Create(topWin, 0);
+		 calendar->SetPosSizePixel( Point( 10, 300 ), Size( 120,25 ) );
+		 calendar->Show();
 
 	    m->release( );
 

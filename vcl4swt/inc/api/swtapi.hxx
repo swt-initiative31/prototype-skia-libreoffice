@@ -15,6 +15,8 @@ extern "C" {
 
     int add_button(void);
 
+    int add_calendar(void);
+
 
 
 }

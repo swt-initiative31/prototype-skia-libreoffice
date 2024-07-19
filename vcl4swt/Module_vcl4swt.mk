@@ -39,7 +39,7 @@ $(eval $(call gb_Module_Module,vcl4swt))
     )) \
 ))
 
-#$(eval $(call gb_Module_add_targets,vcl4swt,\
+$(eval $(call gb_Module_add_targets,vcl4swt,\
     Library_vcl4swt \
     Executable_test-vcl4swt \
 ))
