@@ -35,7 +35,6 @@
 # autoconf generated stuff
 /aclocal.m4
 /autom4te.cache
-/autogen.input
 /autogen.lastrun
 /autogen.lastrun.bak
 /ChangeLog
@@ -199,3 +198,6 @@ gdbtrace.log
 
 # xml unit tests sometimes leave these lying around
 **/secmod.db
+
+# java build files for uno swt
+/VclUnoSwt/bin

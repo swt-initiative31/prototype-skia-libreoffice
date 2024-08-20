@@ -77,6 +77,7 @@ $(eval $(call gb_Helper_register_executables,NONE, \
 	vcldemo \
 	svdemo \
 	minvcl \
+	test-vcl4swt \
 	svptest \
 	tiledrendering \
 	mtfdemo \
@@ -377,6 +378,7 @@ $(eval $(call gb_Helper_register_libraries_for_install,OOOLIBS,ooo, \
 ))
 endif
 
+# TODO add vcl4swt lib in following list
 $(eval $(call gb_Helper_register_libraries_for_install,OOOLIBS,ooo, \
     avmedia \
 	$(if $(ENABLE_CURL),LanguageTool) \
@@ -492,6 +494,7 @@ $(eval $(call gb_Helper_register_libraries_for_install,OOOLIBS,ooo, \
 		vbahelper \
 	) \
 	vcl \
+	vcl4swt \
 	writerperfect \
 	xmlscript \
 	xmlfa \
@@ -1214,6 +1217,7 @@ $(eval $(call gb_Helper_register_mos,\
 	sw \
 	uui \
 	vcl \
+	vcl4swt \
 	wiz \
 	wpt \
 	$(if $(ENABLE_NSS)$(ENABLE_OPENSSL),xsc) \
@@ -1267,6 +1271,7 @@ $(eval $(call gb_Helper_register_uiconfigs,\
 	svx \
 	uui \
 	vcl \
+	vcl4swt \
 	writerperfect \
 	$(if $(ENABLE_NSS)$(ENABLE_OPENSSL),xmlsec) \
 ))

@@ -87,6 +87,7 @@ $(eval $(call gb_Module_add_moduledirs,cross_toolset,\
 		unoxml \
 		uui \
 		vcl \
+		vcl4swt \
 		xmloff \
 		xmlscript \
 	) \
